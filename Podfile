@@ -8,4 +8,6 @@ target 'LunchMatch' do
   # Pods for LunchMatch
   pod 'Moya'
   pod 'Kingfisher'
+
+  pod 'R.swift'
 end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		019466522555D1C100ED241C /* XibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019466512555D1C100ED241C /* XibInitializable.swift */; };
+		0194665F2555E62700ED241C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194665E2555E62700ED241C /* R.generated.swift */; };
 		0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C87F2555C6F4007E8439 /* AppDelegate.swift */; };
 		0194C8822555C6F4007E8439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C8812555C6F4007E8439 /* SceneDelegate.swift */; };
 		0194C8842555C6F4007E8439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C8832555C6F4007E8439 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		019466512555D1C100ED241C /* XibInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibInitializable.swift; sourceTree = "<group>"; };
+		0194665E2555E62700ED241C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		0194C87C2555C6F4007E8439 /* LunchMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0194C87F2555C6F4007E8439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0194C8812555C6F4007E8439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		0194C87E2555C6F4007E8439 /* LunchMatch */ = {
 			isa = PBXGroup;
 			children = (
+				0194665E2555E62700ED241C /* R.generated.swift */,
 				019466542555D1E600ED241C /* Features */,
 				0194664F2555D19B00ED241C /* Core */,
 				0194C87F2555C6F4007E8439 /* AppDelegate.swift */,
@@ -130,6 +133,7 @@
 				0194C8792555C6F4007E8439 /* Frameworks */,
 				0194C87A2555C6F4007E8439 /* Resources */,
 				CAD2AC58242D3094E2F94C2C /* [CP] Embed Pods Frameworks */,
+				0194665C2555E57700ED241C /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -186,6 +190,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0194665C2555E57700ED241C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		11BD9020BB2FF0CD7A079315 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +258,7 @@
 			files = (
 				0194C8842555C6F4007E8439 /* ViewController.swift in Sources */,
 				019466522555D1C100ED241C /* XibInitializable.swift in Sources */,
+				0194665F2555E62700ED241C /* R.generated.swift in Sources */,
 				0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */,
 				0194C8822555C6F4007E8439 /* SceneDelegate.swift in Sources */,
 			);

@@ -6,5 +6,6 @@ target 'LunchMatch' do
   use_frameworks!
 
   # Pods for LunchMatch
-
+  pod 'Moya'
+  pod 'Kingfisher'
 end

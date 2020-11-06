@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019466522555D1C100ED241C /* XibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019466512555D1C100ED241C /* XibInitializable.swift */; };
 		0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C87F2555C6F4007E8439 /* AppDelegate.swift */; };
 		0194C8822555C6F4007E8439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C8812555C6F4007E8439 /* SceneDelegate.swift */; };
 		0194C8842555C6F4007E8439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C8832555C6F4007E8439 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019466512555D1C100ED241C /* XibInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibInitializable.swift; sourceTree = "<group>"; };
 		0194C87C2555C6F4007E8439 /* LunchMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0194C87F2555C6F4007E8439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0194C8812555C6F4007E8439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0194664F2555D19B00ED241C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				019466502555D1AD00ED241C /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		019466502555D1AD00ED241C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				019466512555D1C100ED241C /* XibInitializable.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		019466542555D1E600ED241C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		0194C8732555C6F4007E8439 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +88,8 @@
 		0194C87E2555C6F4007E8439 /* LunchMatch */ = {
 			isa = PBXGroup;
 			children = (
+				019466542555D1E600ED241C /* Features */,
+				0194664F2555D19B00ED241C /* Core */,
 				0194C87F2555C6F4007E8439 /* AppDelegate.swift */,
 				0194C8812555C6F4007E8439 /* SceneDelegate.swift */,
 				0194C8832555C6F4007E8439 /* ViewController.swift */,
@@ -80,7 +107,6 @@
 				102149DF638A1ADEE47B4BBC /* Pods-LunchMatch.debug.xcconfig */,
 				7514B89120CF9F8FC7CACC4C /* Pods-LunchMatch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0194C8842555C6F4007E8439 /* ViewController.swift in Sources */,
+				019466522555D1C100ED241C /* XibInitializable.swift in Sources */,
 				0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */,
 				0194C8822555C6F4007E8439 /* SceneDelegate.swift in Sources */,
 			);

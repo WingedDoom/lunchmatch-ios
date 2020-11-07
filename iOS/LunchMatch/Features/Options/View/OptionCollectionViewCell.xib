@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="placeImageView" destination="Qeg-fH-J2w" id="hya-FZ-9Qd"/>
                 <outlet property="placeTitleLabel" destination="oe5-gM-GRy" id="V6X-0Z-cDy"/>
+                <outlet property="selectButton" destination="SvP-Uc-84m" id="2CG-Ob-LdN"/>
                 <outlet property="stackView" destination="UoQ-v6-GKI" id="8if-0E-P2v"/>
                 <outlet property="subtitleLabel" destination="K42-Uc-COA" id="Zuv-GR-CkJ"/>
             </connections>
@@ -32,29 +33,39 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UoQ-v6-GKI">
-                        <rect key="frame" x="0.0" y="176" width="330" height="37.5"/>
+                        <rect key="frame" x="98" y="176" width="232" height="37.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бар Голубая Устрица" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-gM-GRy">
-                                <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="232" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saske, naruto, evgerher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K42-Uc-COA">
-                                <rect key="frame" x="0.0" y="20.5" width="330" height="17"/>
+                                <rect key="frame" x="0.0" y="20.5" width="232" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvP-Uc-84m" customClass="SelectableButton" customModule="LunchMatch" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="181" width="78" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="78" id="fUs-ac-isc"/>
+                            <constraint firstAttribute="height" constant="28" id="tgz-EY-Xir"/>
+                        </constraints>
+                        <state key="normal" title="Select"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="UoQ-v6-GKI" firstAttribute="top" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="21" id="1qC-ld-s7h"/>
+                    <constraint firstItem="SvP-Uc-84m" firstAttribute="centerY" secondItem="UoQ-v6-GKI" secondAttribute="centerY" id="59u-9F-YAN"/>
                     <constraint firstItem="Qeg-fH-J2w" firstAttribute="leading" secondItem="6NH-vB-d6H" secondAttribute="leading" id="6e8-Ir-KoR"/>
                     <constraint firstItem="Qeg-fH-J2w" firstAttribute="top" secondItem="6NH-vB-d6H" secondAttribute="top" id="8eG-la-uep"/>
-                    <constraint firstItem="UoQ-v6-GKI" firstAttribute="leading" secondItem="Qeg-fH-J2w" secondAttribute="leading" id="OIt-rO-JBJ"/>
+                    <constraint firstItem="SvP-Uc-84m" firstAttribute="leading" secondItem="Qeg-fH-J2w" secondAttribute="leading" id="DoK-rw-0uu"/>
                     <constraint firstAttribute="trailing" secondItem="Qeg-fH-J2w" secondAttribute="trailing" id="UGJ-n7-JdF"/>
+                    <constraint firstItem="UoQ-v6-GKI" firstAttribute="leading" secondItem="SvP-Uc-84m" secondAttribute="trailing" constant="20" id="foQ-jh-HRV"/>
                     <constraint firstItem="UoQ-v6-GKI" firstAttribute="trailing" secondItem="Qeg-fH-J2w" secondAttribute="trailing" id="tec-6K-wFP"/>
                 </constraints>
             </collectionViewCellContentView>

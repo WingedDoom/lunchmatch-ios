@@ -58,7 +58,7 @@ extension SelectModeViewController: SelectModeViewDelegate {
 private extension SelectModeViewController {
     var roomViewModel: SelectModeViewModel {
         .init(
-            image: R.image.selectMode_SingleArt(),
+            image: R.image.selectMode_RoomArt(),
             title: R.string.localizable.selectModeRoomTitle(),
             description: R.string.localizable.selectModeRoomDescription()
         )

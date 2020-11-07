@@ -10,4 +10,5 @@ target 'LunchMatch' do
   pod 'Kingfisher'
 
   pod 'R.swift'
+  pod 'RangeSeekSlider'
 end

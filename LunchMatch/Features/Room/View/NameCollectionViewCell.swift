@@ -28,7 +28,7 @@ class NameCollectionViewCell: UICollectionViewCell, XibInitializable {
     
     func configure(with viewModel: NameCollectionViewModel) {
         nameLabel.text = viewModel.name
-        backgroundColor = UIColor.yellow
+        backgroundColor = R.color.backgroundPrimary()
         self.layer.cornerRadius = 15
     }
     

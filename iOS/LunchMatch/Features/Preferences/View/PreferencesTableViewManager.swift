@@ -31,6 +31,7 @@ class PreferencesTableViewManager: NSObject {
         
         tableView.register(UINib(resource: R.nib.preferencesTableViewHeader), forHeaderFooterViewReuseIdentifier: PreferencesTableViewHeader.reuseIdentifier)
         tableView.register(UINib(resource: R.nib.preferencesTableViewCell), forCellReuseIdentifier: PreferencesTableViewCell.reuseIdentifier)
+        tableView.register(UINib(resource: R.nib.rangeTableViewCell), forCellReuseIdentifier: RangeTableViewCell.reuseIdentifier)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,40 +45,50 @@ class PreferencesTableViewManager: NSObject {
 extension PreferencesTableViewManager: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 { return 150.0 }
         return 50.0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 { return 0.0 }
         return 50.0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return getViewModel().sections.count
+        return getViewModel().sections.count + 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getViewModel().sections[section].cells.count
+        if section == 0 { return 1 }
+        return getViewModel().sections[section - 1].cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: RangeTableViewCell.reuseIdentifier) as! RangeTableViewCell
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: PreferencesTableViewCell.reuseIdentifier) as! PreferencesTableViewCell
-        cell.configure(with: getViewModel().sections[indexPath.section].cells[indexPath.row])
+        cell.configure(with: getViewModel().sections[indexPath.section - 1].cells[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section != 0 else { return nil }
+        
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: PreferencesTableViewHeader.reuseIdentifier) as! PreferencesTableViewHeader
-        header.configure(with: getViewModel().sections[section].header)
+        header.configure(with: getViewModel().sections[section - 1].header)
         return header
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        preferencesViewModelFactory.selectCell(at: indexPath)
+        preferencesViewModelFactory.selectCell(at: IndexPath(row: indexPath.row, section: indexPath.section - 1))
         tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        preferencesViewModelFactory.selectCell(at: indexPath)
+        preferencesViewModelFactory.selectCell(at: IndexPath(row: indexPath.row, section: indexPath.section - 1))
         tableView.reloadData()
     }
     

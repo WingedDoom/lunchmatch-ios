@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="196" id="Iz1-xu-3u2" customClass="RangeTableViewCell" customModule="LunchMatch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="499" height="196"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iz1-xu-3u2" id="z5f-Pg-uPK">
+                <rect key="frame" x="0.0" y="0.0" width="499" height="196"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgn-Bz-sHw" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                        <rect key="frame" x="0.0" y="51" width="499" height="145"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                <real key="value" value="300"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                <real key="value" value="300"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hideLabels" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQh-3b-UQS">
+                        <rect key="frame" x="192" y="15" width="115" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Qgn-Bz-sHw" secondAttribute="trailing" id="4Nd-be-VKA"/>
+                    <constraint firstItem="Qgn-Bz-sHw" firstAttribute="leading" secondItem="z5f-Pg-uPK" secondAttribute="leading" id="5jE-PZ-hdv"/>
+                    <constraint firstItem="NQh-3b-UQS" firstAttribute="top" secondItem="z5f-Pg-uPK" secondAttribute="top" constant="15" id="ZLw-o3-PNX"/>
+                    <constraint firstItem="NQh-3b-UQS" firstAttribute="centerX" secondItem="z5f-Pg-uPK" secondAttribute="centerX" id="ZWr-5O-1jz"/>
+                    <constraint firstAttribute="bottom" secondItem="Qgn-Bz-sHw" secondAttribute="bottom" id="egz-6X-3Dz"/>
+                    <constraint firstItem="Qgn-Bz-sHw" firstAttribute="top" secondItem="NQh-3b-UQS" secondAttribute="bottom" constant="15" id="wCc-pi-v9r"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="rangePicker" destination="Qgn-Bz-sHw" id="JGn-tJ-bkk"/>
+            </connections>
+            <point key="canvasLocation" x="64.492753623188406" y="-299.33035714285711"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -44,19 +44,6 @@ class PreferencesViewModelFactory: ProvidesPreferences {
     }
     
     func getPreferences() -> PreferencesViewModel {
-        let firstSection = PreferencesSection(header: PreferencesTableViewHeaderViewModel(title: "Cuisine",
-                                                                                          counter: getCounter(cuisineOptions),
-                                                                                          isOpened: false,
-                                                                                          selectAction: { self.selectSection(0) }),
-                                              cells: cuisineOptions)
-        
-        let secondSection = PreferencesSection(header: PreferencesTableViewHeaderViewModel(title: "Allergies and diets",
-                                                                                           counter: getCounter(cuisineOptions),
-                                                                                           isOpened: false,
-                                                                                           selectAction: { self.selectSection(1) }),
-                                               cells: allergiesOptions)
-        
-        data = PreferencesViewModel(sections: [firstSection, secondSection])
         return data
     }
     

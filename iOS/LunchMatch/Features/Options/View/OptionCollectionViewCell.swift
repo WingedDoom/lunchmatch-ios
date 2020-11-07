@@ -20,7 +20,17 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     private weak var subtitleLabel: UILabel!
     
     @IBOutlet
-    private  weak var stackView: UIStackView!
+    private weak var stackView: UIStackView!
+    
+    @IBOutlet
+    private weak var selectButton: SelectableButton! {
+        didSet  {
+            selectButton.addTarget(self, action: #selector(selectButtonDidTap), for: .touchUpInside)
+            selectButton.deselect()
+        }
+    }
+    
+    private var placeSelected: Bool = false
     
     // MARK: - Initialization
     override public init(frame: CGRect) {
@@ -41,6 +51,12 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     
     private func didLoad() {
         xibSetup()
+    }
+    
+    @objc private func selectButtonDidTap() {
+        placeSelected = !placeSelected
+        
+        selectButton.setSelected(placeSelected)
     }
     
     override func prepareForReuse() {

@@ -50,6 +50,7 @@
 		16F450AE2556ED0E0078D47A /* OptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450A52556ED0E0078D47A /* OptionCollectionViewCell.swift */; };
 		16F450AF2556ED0E0078D47A /* OptionsViewCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450A62556ED0E0078D47A /* OptionsViewCollectionViewManager.swift */; };
 		16F450B02556ED0E0078D47A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450A82556ED0E0078D47A /* OptionsViewController.swift */; };
+		16F450C42556F84B0078D47A /* SelecteableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450C32556F84B0078D47A /* SelecteableButton.swift */; };
 		2628AC34583E59D74D6D8023 /* Pods_LunchMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		16F450A52556ED0E0078D47A /* OptionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		16F450A62556ED0E0078D47A /* OptionsViewCollectionViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewCollectionViewManager.swift; sourceTree = "<group>"; };
 		16F450A82556ED0E0078D47A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		16F450C32556F84B0078D47A /* SelecteableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteableButton.swift; sourceTree = "<group>"; };
 		7514B89120CF9F8FC7CACC4C /* Pods-LunchMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchMatch.release.xcconfig"; path = "Target Support Files/Pods-LunchMatch/Pods-LunchMatch.release.xcconfig"; sourceTree = "<group>"; };
 		DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				019466512555D1C100ED241C /* XibInitializable.swift */,
 				16F4503525569CD70078D47A /* Reusable.swift */,
 				0194703C2556DB1000ED241C /* LMNavigationController.swift */,
+				16F450C32556F84B0078D47A /* SelecteableButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F45031255693F90078D47A /* HistoryViewCollectionViewManager.swift in Sources */,
+				16F450C42556F84B0078D47A /* SelecteableButton.swift in Sources */,
 				0194C8842555C6F4007E8439 /* ViewController.swift in Sources */,
 				0194703D2556DB1000ED241C /* LMNavigationController.swift in Sources */,
 				019479DD2556E8BE00ED241C /* UIFont+defaultFonts.swift in Sources */,

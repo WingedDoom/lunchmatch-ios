@@ -49,6 +49,15 @@
 		16F450AF2556ED0E0078D47A /* OptionsViewCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450A62556ED0E0078D47A /* OptionsViewCollectionViewManager.swift */; };
 		16F450B02556ED0E0078D47A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450A82556ED0E0078D47A /* OptionsViewController.swift */; };
 		16F450C42556F84B0078D47A /* SelecteableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450C32556F84B0078D47A /* SelecteableButton.swift */; };
+		16F450CB2556FC490078D47A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450CA2556FC490078D47A /* PreferencesViewController.swift */; };
+		16F450D12556FC770078D47A /* PreferencesViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450D02556FC770078D47A /* PreferencesViewModelFactory.swift */; };
+		16F450D42556FC870078D47A /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450D32556FC870078D47A /* PreferencesViewModel.swift */; };
+		16F450D72556FC970078D47A /* PreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450D62556FC970078D47A /* PreferencesTableViewCell.swift */; };
+		16F450DA2556FCA50078D47A /* PreferencesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F450D92556FCA50078D47A /* PreferencesTableViewCell.xib */; };
+		16F450DD2556FCB60078D47A /* PreferencesTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450DC2556FCB60078D47A /* PreferencesTableViewManager.swift */; };
+		16F450E02556FCD80078D47A /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450DF2556FCD80078D47A /* PreferencesView.swift */; };
+		16F450E42556FDC80078D47A /* PreferencesTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450E32556FDC80078D47A /* PreferencesTableViewHeader.swift */; };
+		16F450E72556FDD40078D47A /* PreferencesTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F450E62556FDD40078D47A /* PreferencesTableViewHeader.xib */; };
 		2628AC34583E59D74D6D8023 /* Pods_LunchMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +107,15 @@
 		16F450A62556ED0E0078D47A /* OptionsViewCollectionViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewCollectionViewManager.swift; sourceTree = "<group>"; };
 		16F450A82556ED0E0078D47A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		16F450C32556F84B0078D47A /* SelecteableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteableButton.swift; sourceTree = "<group>"; };
+		16F450CA2556FC490078D47A /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		16F450D02556FC770078D47A /* PreferencesViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModelFactory.swift; sourceTree = "<group>"; };
+		16F450D32556FC870078D47A /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
+		16F450D62556FC970078D47A /* PreferencesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewCell.swift; sourceTree = "<group>"; };
+		16F450D92556FCA50078D47A /* PreferencesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesTableViewCell.xib; sourceTree = "<group>"; };
+		16F450DC2556FCB60078D47A /* PreferencesTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewManager.swift; sourceTree = "<group>"; };
+		16F450DF2556FCD80078D47A /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		16F450E32556FDC80078D47A /* PreferencesTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewHeader.swift; sourceTree = "<group>"; };
+		16F450E62556FDD40078D47A /* PreferencesTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesTableViewHeader.xib; sourceTree = "<group>"; };
 		7514B89120CF9F8FC7CACC4C /* Pods-LunchMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchMatch.release.xcconfig"; path = "Target Support Files/Pods-LunchMatch/Pods-LunchMatch.release.xcconfig"; sourceTree = "<group>"; };
 		DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +155,7 @@
 		019466542555D1E600ED241C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				16F450C62556FBE40078D47A /* Preferences */,
 				16F4509D2556ED0E0078D47A /* Options */,
 				019479E32556EE9C00ED241C /* SelectMode */,
 				16F450482556BDF80078D47A /* Room */,
@@ -334,6 +353,46 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		16F450C62556FBE40078D47A /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				16F450C92556FC070078D47A /* ViewController */,
+				16F450C82556FC020078D47A /* Model */,
+				16F450C72556FBFF0078D47A /* View */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		16F450C72556FBFF0078D47A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16F450D32556FC870078D47A /* PreferencesViewModel.swift */,
+				16F450D62556FC970078D47A /* PreferencesTableViewCell.swift */,
+				16F450D92556FCA50078D47A /* PreferencesTableViewCell.xib */,
+				16F450DC2556FCB60078D47A /* PreferencesTableViewManager.swift */,
+				16F450DF2556FCD80078D47A /* PreferencesView.swift */,
+				16F450E32556FDC80078D47A /* PreferencesTableViewHeader.swift */,
+				16F450E62556FDD40078D47A /* PreferencesTableViewHeader.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16F450C82556FC020078D47A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16F450D02556FC770078D47A /* PreferencesViewModelFactory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16F450C92556FC070078D47A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16F450CA2556FC490078D47A /* PreferencesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		43E907605035C464D077BE91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,10 +470,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F450DA2556FCA50078D47A /* PreferencesTableViewCell.xib in Resources */,
 				16F45025255688710078D47A /* MatchCollectionViewCell.xib in Resources */,
 				16F4505C2556C2CD0078D47A /* NameCollectionViewCell.xib in Resources */,
 				0194C88C2555C6F5007E8439 /* LaunchScreen.storyboard in Resources */,
 				16F450772556D4D10078D47A /* RoomView.xib in Resources */,
+				16F450E72556FDD40078D47A /* PreferencesTableViewHeader.xib in Resources */,
 				16F450AC2556ED0E0078D47A /* OptionCollectionViewCell.xib in Resources */,
 				0194C8892555C6F5007E8439 /* Assets.xcassets in Resources */,
 				0194C8872555C6F4007E8439 /* Main.storyboard in Resources */,
@@ -495,10 +556,13 @@
 				16F450C42556F84B0078D47A /* SelecteableButton.swift in Sources */,
 				0194C8842555C6F4007E8439 /* ViewController.swift in Sources */,
 				0194703D2556DB1000ED241C /* LMNavigationController.swift in Sources */,
+				16F450DD2556FCB60078D47A /* PreferencesTableViewManager.swift in Sources */,
 				019479DD2556E8BE00ED241C /* UIFont+defaultFonts.swift in Sources */,
+				16F450CB2556FC490078D47A /* PreferencesViewController.swift in Sources */,
 				019466522555D1C100ED241C /* XibInitializable.swift in Sources */,
 				16F4503625569CD70078D47A /* Reusable.swift in Sources */,
 				16F450AD2556ED0E0078D47A /* OptionsView.swift in Sources */,
+				16F450D12556FC770078D47A /* PreferencesViewModelFactory.swift in Sources */,
 				16F450422556A38D0078D47A /* HistoryRepository.swift in Sources */,
 				16F4505F2556C2DD0078D47A /* RoomRepository.swift in Sources */,
 				019470352556A84C00ED241C /* StringExtension.swift in Sources */,
@@ -510,6 +574,7 @@
 				16F450552556C2A10078D47A /* NamesCollectionViewManager.swift in Sources */,
 				16F4502E25568F230078D47A /* MatchCollectionViewModel.swift in Sources */,
 				019479E82556EEC200ED241C /* SelectModeViewController.swift in Sources */,
+				16F450D72556FC970078D47A /* PreferencesTableViewCell.swift in Sources */,
 				0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */,
 				16F450512556C2870078D47A /* NameCollectionViewCell.swift in Sources */,
 				16F4503A25569E370078D47A /* HistoryView.swift in Sources */,
@@ -519,12 +584,15 @@
 				16F450692556C3200078D47A /* RoomItem.swift in Sources */,
 				16F450AE2556ED0E0078D47A /* OptionCollectionViewCell.swift in Sources */,
 				16F450AB2556ED0E0078D47A /* OptionsCollectionViewModel.swift in Sources */,
+				16F450E02556FCD80078D47A /* PreferencesView.swift in Sources */,
 				16F4504E2556C26D0078D47A /* RoomView.swift in Sources */,
+				16F450E42556FDC80078D47A /* PreferencesTableViewHeader.swift in Sources */,
 				16F450452556A3970078D47A /* HistoryItem.swift in Sources */,
 				0194C8822555C6F4007E8439 /* SceneDelegate.swift in Sources */,
 				16F450AA2556ED0E0078D47A /* OptionsRepository.swift in Sources */,
 				16F450B02556ED0E0078D47A /* OptionsViewController.swift in Sources */,
 				16F450AF2556ED0E0078D47A /* OptionsViewCollectionViewManager.swift in Sources */,
+				16F450D42556FC870078D47A /* PreferencesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

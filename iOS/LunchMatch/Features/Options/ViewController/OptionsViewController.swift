@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class OptionsViewController: UIViewController {
     
     let repository: ProvidesOptions = OptionsRepositoryMock()

@@ -24,6 +24,21 @@
             </objects>
             <point key="canvasLocation" x="609" y="633"/>
         </scene>
+        <!--Room View Controller-->
+        <scene sceneID="VmD-SG-eta">
+            <objects>
+                <viewController storyboardIdentifier="RoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V6G-FD-TiX" customClass="RoomViewController" customModule="LunchMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LlT-dL-TZk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GRv-T2-0b0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCf-gP-d4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="633"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="naX-NO-hJQ">
             <objects>

@@ -8,5 +8,6 @@
 import Foundation
 
 struct RoomViewModel {
-    
+    let qrCodeImageViewURL: URL
+    let roomID: String
 }

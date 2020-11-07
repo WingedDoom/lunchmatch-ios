@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct RoomItem {
+    let qrCodeImageViewURL: URL
+    let roomID: String
+}

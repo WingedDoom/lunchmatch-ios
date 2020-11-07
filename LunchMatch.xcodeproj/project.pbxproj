@@ -34,6 +34,7 @@
 		16F450692556C3200078D47A /* RoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450682556C3200078D47A /* RoomItem.swift */; };
 		16F4506D2556C33A0078D47A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4506C2556C33A0078D47A /* RoomViewController.swift */; };
 		16F450702556CC600078D47A /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4506F2556CC600078D47A /* RoomViewModel.swift */; };
+		16F450772556D4D10078D47A /* RoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F450762556D4D10078D47A /* RoomView.xib */; };
 		2628AC34583E59D74D6D8023 /* Pods_LunchMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		16F450682556C3200078D47A /* RoomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItem.swift; sourceTree = "<group>"; };
 		16F4506C2556C33A0078D47A /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		16F4506F2556CC600078D47A /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		16F450762556D4D10078D47A /* RoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomView.xib; sourceTree = "<group>"; };
 		7514B89120CF9F8FC7CACC4C /* Pods-LunchMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchMatch.release.xcconfig"; path = "Target Support Files/Pods-LunchMatch/Pods-LunchMatch.release.xcconfig"; sourceTree = "<group>"; };
 		DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -229,6 +231,7 @@
 				16F450582556C2C00078D47A /* NameCollectionViewModel.swift */,
 				16F4505B2556C2CD0078D47A /* NameCollectionViewCell.xib */,
 				16F4506F2556CC600078D47A /* RoomViewModel.swift */,
+				16F450762556D4D10078D47A /* RoomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				16F45025255688710078D47A /* MatchCollectionViewCell.xib in Resources */,
 				16F4505C2556C2CD0078D47A /* NameCollectionViewCell.xib in Resources */,
 				0194C88C2555C6F5007E8439 /* LaunchScreen.storyboard in Resources */,
+				16F450772556D4D10078D47A /* RoomView.xib in Resources */,
 				0194C8892555C6F5007E8439 /* Assets.xcassets in Resources */,
 				0194C8872555C6F4007E8439 /* Main.storyboard in Resources */,
 			);

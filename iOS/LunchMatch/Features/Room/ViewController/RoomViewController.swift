@@ -9,7 +9,13 @@ import UIKit
 
 class RoomViewController: UIViewController {
     
-    let repository: RoomRepository = RoomRepositoryMock()
+    let repository: ProvidesRoomData = RoomRepositoryMock()
+    private var presentedViewModel: RoomViewModel? {
+        didSet {
+            guard let viewModel = presentedViewModel else { return }
+            roomView.configure(with: viewModel)
+        }
+    }
     
     private var roomView: RoomView {
         view as! RoomView
@@ -23,31 +29,31 @@ class RoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBar()
+        repository.delegate = self
         loadRoom()
-    }
-    
-    private func setupNavigationBar() {
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationItem.title =  "Evgerher"
-//        navigationController?.navigationBar.backgroundColor = UIColor.yellow
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newSessionDidTap))
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(settingsDidTap))
     }
     
     private func loadRoom() {
         repository.getRoomInfo { response in
             switch response {
             case let .success(result):
-                self.roomView.configure(with: self.parseResult(result))
-                
+                let viewModel = self.parseResult(result)
+                self.presentedViewModel = viewModel
             case .failure:
                 return
             }
         }
+        repository.connect()
     }
     
     private func parseResult(_ room: RoomItem) -> RoomViewModel {
-        return RoomViewModel(qrCodeImageViewURL: room.qrCodeImageViewURL, roomID: room.roomID)
+        return RoomViewModel(qrCodeImageViewURL: room.qrCodeImageViewURL, roomID: room.roomID, participants: [])
+    }
+}
+
+extension RoomViewController: RoomRepositoryDelegate {
+    func roomDidUpdateParticipants(newParticipants: [String]) {
+        guard let viewModel = presentedViewModel else { return }
+        presentedViewModel = viewModel.withParticipants(newParticipants.map { .init(name: $0) })
     }
 }

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol ProvidesMatchingData: AnyObject {
+
+}
+
+class MatchingRepositoryMock: ProvidesMatchingData {}

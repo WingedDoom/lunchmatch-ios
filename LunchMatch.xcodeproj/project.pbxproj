@@ -33,6 +33,7 @@
 		16F4505F2556C2DD0078D47A /* RoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4505E2556C2DD0078D47A /* RoomRepository.swift */; };
 		16F450692556C3200078D47A /* RoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F450682556C3200078D47A /* RoomItem.swift */; };
 		16F4506D2556C33A0078D47A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4506C2556C33A0078D47A /* RoomViewController.swift */; };
+		16F450702556CC600078D47A /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4506F2556CC600078D47A /* RoomViewModel.swift */; };
 		2628AC34583E59D74D6D8023 /* Pods_LunchMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		16F4505E2556C2DD0078D47A /* RoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepository.swift; sourceTree = "<group>"; };
 		16F450682556C3200078D47A /* RoomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItem.swift; sourceTree = "<group>"; };
 		16F4506C2556C33A0078D47A /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		16F4506F2556CC600078D47A /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		7514B89120CF9F8FC7CACC4C /* Pods-LunchMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchMatch.release.xcconfig"; path = "Target Support Files/Pods-LunchMatch/Pods-LunchMatch.release.xcconfig"; sourceTree = "<group>"; };
 		DBE883E67B7063EE7DC1716C /* Pods_LunchMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 				16F450542556C2A10078D47A /* NamesCollectionViewManager.swift */,
 				16F450582556C2C00078D47A /* NameCollectionViewModel.swift */,
 				16F4505B2556C2CD0078D47A /* NameCollectionViewCell.xib */,
+				16F4506F2556CC600078D47A /* RoomViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				019470352556A84C00ED241C /* StringExtension.swift in Sources */,
 				0194665F2555E62700ED241C /* R.generated.swift in Sources */,
 				16F4503F2556A2C30078D47A /* HistoryViewController.swift in Sources */,
+				16F450702556CC600078D47A /* RoomViewModel.swift in Sources */,
 				16F4506D2556C33A0078D47A /* RoomViewController.swift in Sources */,
 				16F450552556C2A10078D47A /* NamesCollectionViewManager.swift in Sources */,
 				16F4502E25568F230078D47A /* MatchCollectionViewModel.swift in Sources */,

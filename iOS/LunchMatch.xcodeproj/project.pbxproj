@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010656982556FCA80069C488 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0106569A2556FCA80069C488 /* Localizable.strings */; };
+		0106569D255702A70069C488 /* SelectModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0106569C255702A70069C488 /* SelectModeViewModel.swift */; };
 		019466522555D1C100ED241C /* XibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019466512555D1C100ED241C /* XibInitializable.swift */; };
 		0194665F2555E62700ED241C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194665E2555E62700ED241C /* R.generated.swift */; };
 		019470352556A84C00ED241C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019470342556A84C00ED241C /* StringExtension.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010656992556FCA80069C488 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0106569C255702A70069C488 /* SelectModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeViewModel.swift; sourceTree = "<group>"; };
 		019466512555D1C100ED241C /* XibInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibInitializable.swift; sourceTree = "<group>"; };
 		0194665E2555E62700ED241C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		019470342556A84C00ED241C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			children = (
 				019479EA2556EECD00ED241C /* SelectModeView.swift */,
 				019479ED2556EEDA00ED241C /* SelectModeView.xib */,
+				0106569C255702A70069C488 /* SelectModeViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 		0194C8732555C6F4007E8439 = {
 			isa = PBXGroup;
 			children = (
+				0106569A2556FCA80069C488 /* Localizable.strings */,
 				0194C87E2555C6F4007E8439 /* LunchMatch */,
 				0194C87D2555C6F4007E8439 /* Products */,
 				43E907605035C464D077BE91 /* Pods */,
@@ -415,6 +421,7 @@
 				16F4505C2556C2CD0078D47A /* NameCollectionViewCell.xib in Resources */,
 				0194C88C2555C6F5007E8439 /* LaunchScreen.storyboard in Resources */,
 				16F450772556D4D10078D47A /* RoomView.xib in Resources */,
+				010656982556FCA80069C488 /* Localizable.strings in Resources */,
 				16F450AC2556ED0E0078D47A /* OptionCollectionViewCell.xib in Resources */,
 				0194C8892555C6F5007E8439 /* Assets.xcassets in Resources */,
 				0194C8872555C6F4007E8439 /* Main.storyboard in Resources */,
@@ -497,6 +504,7 @@
 				0194703D2556DB1000ED241C /* LMNavigationController.swift in Sources */,
 				019479DD2556E8BE00ED241C /* UIFont+defaultFonts.swift in Sources */,
 				019466522555D1C100ED241C /* XibInitializable.swift in Sources */,
+				0106569D255702A70069C488 /* SelectModeViewModel.swift in Sources */,
 				16F4503625569CD70078D47A /* Reusable.swift in Sources */,
 				16F450AD2556ED0E0078D47A /* OptionsView.swift in Sources */,
 				16F450422556A38D0078D47A /* HistoryRepository.swift in Sources */,
@@ -531,6 +539,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0106569A2556FCA80069C488 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010656992556FCA80069C488 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0194C8852555C6F4007E8439 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

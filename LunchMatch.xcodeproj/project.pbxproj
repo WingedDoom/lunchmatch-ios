@@ -12,6 +12,9 @@
 		019470352556A84C00ED241C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019470342556A84C00ED241C /* StringExtension.swift */; };
 		0194703D2556DB1000ED241C /* LMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194703C2556DB1000ED241C /* LMNavigationController.swift */; };
 		019479DD2556E8BE00ED241C /* UIFont+defaultFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019479DC2556E8BE00ED241C /* UIFont+defaultFonts.swift */; };
+		019479E82556EEC200ED241C /* SelectModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019479E72556EEC200ED241C /* SelectModeViewController.swift */; };
+		019479EB2556EECD00ED241C /* SelectModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019479EA2556EECD00ED241C /* SelectModeView.swift */; };
+		019479EE2556EEDA00ED241C /* SelectModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019479ED2556EEDA00ED241C /* SelectModeView.xib */; };
 		0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C87F2555C6F4007E8439 /* AppDelegate.swift */; };
 		0194C8822555C6F4007E8439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C8812555C6F4007E8439 /* SceneDelegate.swift */; };
 		0194C8842555C6F4007E8439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194C8832555C6F4007E8439 /* ViewController.swift */; };
@@ -46,6 +49,9 @@
 		019470342556A84C00ED241C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		0194703C2556DB1000ED241C /* LMNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMNavigationController.swift; sourceTree = "<group>"; };
 		019479DC2556E8BE00ED241C /* UIFont+defaultFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+defaultFonts.swift"; sourceTree = "<group>"; };
+		019479E72556EEC200ED241C /* SelectModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeViewController.swift; sourceTree = "<group>"; };
+		019479EA2556EECD00ED241C /* SelectModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeView.swift; sourceTree = "<group>"; };
+		019479ED2556EEDA00ED241C /* SelectModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectModeView.xib; sourceTree = "<group>"; };
 		0194C87C2555C6F4007E8439 /* LunchMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0194C87F2555C6F4007E8439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0194C8812555C6F4007E8439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 		019466542555D1E600ED241C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				019479E32556EE9C00ED241C /* SelectMode */,
 				16F450482556BDF80078D47A /* Room */,
 				16F45022255688410078D47A /* History */,
 			);
@@ -125,6 +132,32 @@
 				019479DC2556E8BE00ED241C /* UIFont+defaultFonts.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		019479E32556EE9C00ED241C /* SelectMode */ = {
+			isa = PBXGroup;
+			children = (
+				019479E62556EEB500ED241C /* ViewController */,
+				019479E52556EEAF00ED241C /* View */,
+			);
+			path = SelectMode;
+			sourceTree = "<group>";
+		};
+		019479E52556EEAF00ED241C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				019479EA2556EECD00ED241C /* SelectModeView.swift */,
+				019479ED2556EEDA00ED241C /* SelectModeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		019479E62556EEB500ED241C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				019479E72556EEC200ED241C /* SelectModeViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0194C8732555C6F4007E8439 = {
@@ -325,6 +358,7 @@
 				16F450772556D4D10078D47A /* RoomView.xib in Resources */,
 				0194C8892555C6F5007E8439 /* Assets.xcassets in Resources */,
 				0194C8872555C6F4007E8439 /* Main.storyboard in Resources */,
+				019479EE2556EEDA00ED241C /* SelectModeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,9 +446,11 @@
 				16F4506D2556C33A0078D47A /* RoomViewController.swift in Sources */,
 				16F450552556C2A10078D47A /* NamesCollectionViewManager.swift in Sources */,
 				16F4502E25568F230078D47A /* MatchCollectionViewModel.swift in Sources */,
+				019479E82556EEC200ED241C /* SelectModeViewController.swift in Sources */,
 				0194C8802555C6F4007E8439 /* AppDelegate.swift in Sources */,
 				16F450512556C2870078D47A /* NameCollectionViewCell.swift in Sources */,
 				16F4503A25569E370078D47A /* HistoryView.swift in Sources */,
+				019479EB2556EECD00ED241C /* SelectModeView.swift in Sources */,
 				16F450592556C2C00078D47A /* NameCollectionViewModel.swift in Sources */,
 				16F4502925568AFF0078D47A /* MatchCollectionViewCell.swift in Sources */,
 				16F450692556C3200078D47A /* RoomItem.swift in Sources */,

@@ -7,27 +7,89 @@
 
 import UIKit
 
-class SelectableButton: UIButton {
+class SelectableButton: UIControl {
+    enum Constants {
+        static let height: CGFloat = 44
+        static let labelInset: CGFloat = 16
+    }
     
-    func setSelected(_ selected: Bool) {
-        selected ? select() : deselect()
+    @IBInspectable var title: String {
+        get {
+            titleLabel.text ?? ""
+        }
+        
+        set {
+            titleLabel.text = newValue
+            invalidateIntrinsicContentSize()
+        }
+    }
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .appBody
+        label.textColor = R.color.action()
+        
+        return label
+    }()
+    
+    override var isSelected: Bool {
+        didSet {
+            isSelected ? select() : deselect()
+        }
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            isHighlighted || isSelected ? select() : deselect()
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        didLoad()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        didLoad()
+    }
+    
+    private func didLoad() {
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+        
+        layer.borderWidth = 1
+        layer.borderColor = R.color.action()?.cgColor
+        backgroundColor = .clear
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = bounds.height / 2
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        .init(
+            width: titleLabel.intrinsicContentSize.width + Constants.labelInset * 2,
+            height: Constants.height
+        )
     }
     
     func select() {
-        backgroundColor = UIColor.green
-        layer.cornerRadius = 10
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.green.cgColor
-        setTitleColor(UIColor.white, for: .normal)
-        setTitle("Selected", for: .normal)
+        UIView.animate(withDuration: 0.4) {
+            self.titleLabel.textColor = .white
+            self.backgroundColor = R.color.action()
+        }
     }
     
     func deselect() {
-        backgroundColor = .clear
-        layer.cornerRadius = 10
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.green.cgColor
-        setTitleColor(UIColor.green, for: .normal)
-        setTitle("Select", for: .normal)
+        UIView.animate(withDuration: 0.4) {
+            self.titleLabel.textColor = R.color.action()
+            self.backgroundColor = .clear
+        }
     }
 }

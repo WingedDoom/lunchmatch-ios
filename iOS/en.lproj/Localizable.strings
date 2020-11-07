@@ -10,3 +10,4 @@
 "SelectMode.singleTitle" = "Single";
 "SelectMode.roomDescription" = "\"Room\" mode allows you to collaborate with your friends, match different tastes and select a cafe.";
 "SelectMode.singleDescription" = "\"Single\" mode allows you to find a cafe which suits your tastes and preferences.";
+"SelectMode.nextButtonTitle" = "Next";

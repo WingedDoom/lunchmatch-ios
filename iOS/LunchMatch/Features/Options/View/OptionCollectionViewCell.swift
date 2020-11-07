@@ -56,7 +56,7 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     @objc private func selectButtonDidTap() {
         placeSelected = !placeSelected
         
-        selectButton.setSelected(placeSelected)
+        selectButton.isSelected = placeSelected
     }
     
     override func prepareForReuse() {

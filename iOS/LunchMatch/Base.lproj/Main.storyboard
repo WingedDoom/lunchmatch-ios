@@ -40,6 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="GRv-T2-0b0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="auR-5j-1SS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCf-gP-d4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,6 +73,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Select Mode" largeTitleDisplayMode="never" id="3GI-GE-VSm"/>
+                    <connections>
+                        <segue destination="V6G-FD-TiX" kind="show" identifier="roomSegue" id="mI7-WS-trH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0t-fr-TmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

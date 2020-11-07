@@ -129,11 +129,11 @@
 			buildConfigurationList = 0194C8902555C6F5007E8439 /* Build configuration list for PBXNativeTarget "LunchMatch" */;
 			buildPhases = (
 				11BD9020BB2FF0CD7A079315 /* [CP] Check Pods Manifest.lock */,
+				0194665C2555E57700ED241C /* R.swift */,
 				0194C8782555C6F4007E8439 /* Sources */,
 				0194C8792555C6F4007E8439 /* Frameworks */,
 				0194C87A2555C6F4007E8439 /* Resources */,
 				CAD2AC58242D3094E2F94C2C /* [CP] Embed Pods Frameworks */,
-				0194665C2555E57700ED241C /* R.swift */,
 			);
 			buildRules = (
 			);

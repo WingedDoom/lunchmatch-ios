@@ -65,8 +65,6 @@ extension NamesCollectionViewManager: UICollectionViewDataSource {
 extension NamesCollectionViewManager: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = 100.0
-        let height = 30.0
-        return CGSize(width: width, height: height)
+        return viewModels[indexPath.row].name.getSizeWithConstrainedSize(CGSize(width: 200.0, height: 200.0), font: UIFont.systemFont(ofSize: 17))
     }
 }

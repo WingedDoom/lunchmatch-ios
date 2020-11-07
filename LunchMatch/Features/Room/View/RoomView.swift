@@ -24,6 +24,9 @@ class RoomView: UIView, XibInitializable {
         didSet {
             manager.collectionView = namesCollectionView
             namesCollectionView.backgroundColor = UIColor.white
+            namesCollectionView.setCollectionViewLayout(layout, animated: true)
+            layout.minimumLineSpacing = 10.0
+            layout.minimumInteritemSpacing = 10.0
         }
     }
     
@@ -31,6 +34,7 @@ class RoomView: UIView, XibInitializable {
     private  weak var submitButton: UIButton! {
         didSet {
             submitButton.setTitle("Submit", for: .normal)
+            submitButton.layer.cornerRadius = 15.0
         }
     }
     
@@ -58,8 +62,10 @@ class RoomView: UIView, XibInitializable {
 //        qrCodeImageView?.kf.setImage(with: viewModel.qrCodeImageViewURL)
         roomIDLabel.text = viewModel.roomID
         
-        manager.viewModels = [NameCollectionViewModel(name: "Kek"),
-                              NameCollectionViewModel(name: "Mek"),
-                              NameCollectionViewModel(name: "Pek")]
+        manager.viewModels = [NameCollectionViewModel(name: "Kekster"),
+                              NameCollectionViewModel(name: "Mekster"),
+                              NameCollectionViewModel(name: "Pek"),
+                              NameCollectionViewModel(name: "Hek"),
+                              NameCollectionViewModel(name: "Sek")]
     }
 }

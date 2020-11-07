@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchCollectionViewCell" customModule="LunchMatch" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="5bT-Ns-CQ8" id="4El-L6-Nz0"/>
+                <outlet property="placeImageView" destination="Qeg-fH-J2w" id="hya-FZ-9Qd"/>
+                <outlet property="placeTitleLabel" destination="oe5-gM-GRy" id="V6X-0Z-cDy"/>
+                <outlet property="shareButton" destination="xZc-WP-2cK" id="Uvd-i9-R0h"/>
+                <outlet property="stackView" destination="UoQ-v6-GKI" id="8if-0E-P2v"/>
+                <outlet property="subtitleLabel" destination="K42-Uc-COA" id="Zuv-GR-CkJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2gl-dV-c0v">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6NH-vB-d6H">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="258"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qeg-fH-J2w">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="155"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="330" id="TOz-y4-9qP"/>
+                            <constraint firstAttribute="height" constant="155" id="lQc-vg-j4V"/>
+                            <constraint firstAttribute="width" secondItem="Qeg-fH-J2w" secondAttribute="height" multiplier="66:31" id="uyV-CW-Vng"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UoQ-v6-GKI">
+                        <rect key="frame" x="162.5" y="176" width="167.5" height="37.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бар Голубая Устрица" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-gM-GRy">
+                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saske, naruto, evgerher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K42-Uc-COA">
+                                <rect key="frame" x="0.0" y="20.5" width="167.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-Ns-CQ8">
+                        <rect key="frame" x="0.0" y="188" width="65" height="13.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="dTS-oI-Q57"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZc-WP-2cK">
+                        <rect key="frame" x="275" y="100" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="6qv-Oh-cuQ"/>
+                            <constraint firstAttribute="height" constant="40" id="MEe-lI-gPg"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="default"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UoQ-v6-GKI" firstAttribute="top" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="21" id="1qC-ld-s7h"/>
+                    <constraint firstItem="Qeg-fH-J2w" firstAttribute="leading" secondItem="6NH-vB-d6H" secondAttribute="leading" id="6e8-Ir-KoR"/>
+                    <constraint firstItem="Qeg-fH-J2w" firstAttribute="top" secondItem="6NH-vB-d6H" secondAttribute="top" id="8eG-la-uep"/>
+                    <constraint firstItem="5bT-Ns-CQ8" firstAttribute="leading" secondItem="Qeg-fH-J2w" secondAttribute="leading" id="Hrl-mD-hvI"/>
+                    <constraint firstAttribute="trailing" secondItem="Qeg-fH-J2w" secondAttribute="trailing" id="UGJ-n7-JdF"/>
+                    <constraint firstItem="5bT-Ns-CQ8" firstAttribute="centerY" secondItem="UoQ-v6-GKI" secondAttribute="centerY" id="dIf-0s-D0M"/>
+                    <constraint firstAttribute="trailing" secondItem="xZc-WP-2cK" secondAttribute="trailing" constant="15" id="jZp-oS-ytQ"/>
+                    <constraint firstItem="xZc-WP-2cK" firstAttribute="bottom" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="-15" id="sUj-gA-a3L"/>
+                    <constraint firstItem="UoQ-v6-GKI" firstAttribute="trailing" secondItem="Qeg-fH-J2w" secondAttribute="trailing" id="tec-6K-wFP"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="330" height="258"/>
+            <point key="canvasLocation" x="-456.52173913043481" y="81.026785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

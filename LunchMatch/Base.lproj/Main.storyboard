@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="633"/>
+            <point key="canvasLocation" x="-258" y="632"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="VmD-SG-eta">
@@ -53,7 +53,22 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D28-Pp-cMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-323" y="634"/>
+            <point key="canvasLocation" x="-1190" y="633"/>
+        </scene>
+        <!--Select Mode View Controller-->
+        <scene sceneID="vdj-kT-AEU">
+            <objects>
+                <viewController id="dUQ-g5-ZuT" customClass="SelectModeViewController" customModule="LunchMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X4I-SD-nuC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="68A-KK-ytz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0t-fr-TmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="633"/>
         </scene>
     </scenes>
     <resources>

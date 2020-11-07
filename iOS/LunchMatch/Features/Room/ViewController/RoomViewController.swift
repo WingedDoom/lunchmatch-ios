@@ -29,6 +29,7 @@ class RoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        roomView.delegate = self
         repository.delegate = self
         loadRoom()
     }
@@ -55,5 +56,11 @@ extension RoomViewController: RoomRepositoryDelegate {
     func roomDidUpdateParticipants(newParticipants: [String]) {
         guard let viewModel = presentedViewModel else { return }
         presentedViewModel = viewModel.withParticipants(newParticipants.map { .init(name: $0) })
+    }
+}
+
+extension RoomViewController: RoomViewDelegate {
+    func didTapPreferencesButton() {
+        performSegue(withIdentifier: R.segue.roomViewController.preferences, sender: self)
     }
 }

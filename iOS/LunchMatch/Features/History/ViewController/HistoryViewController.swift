@@ -28,13 +28,6 @@ class HistoryViewController: UIViewController {
     }
     
     @objc
-    func newSessionDidTap() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "RoomViewController") as! RoomViewController
-        self.present(newViewController, animated: true, completion: nil)
-    }
-    
-    @objc
     func settingsDidTap() {
         
     }

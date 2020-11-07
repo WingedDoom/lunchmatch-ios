@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr" translatesAutoresizingMaskIntoConstraints="NO" id="5qS-G6-WvG">
-                    <rect key="frame" x="67.5" y="52" width="279" height="279"/>
+                    <rect key="frame" x="107" y="52" width="200" height="279"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="279" id="8SP-BW-wWX"/>
                     </constraints>
@@ -69,6 +69,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Start matching"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapPreferencesButton" destination="-1" eventType="touchUpInside" id="BfD-Cm-yqo"/>
+                    </connections>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -93,7 +96,7 @@
         </view>
     </objects>
     <resources>
-        <image name="qr" width="279" height="279"/>
+        <image name="qr" width="200" height="200"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

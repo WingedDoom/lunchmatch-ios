@@ -23,22 +23,16 @@ class OptionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadHistory()
+        loadLoadOptions()
     }
     
-    @objc
-    func newSessionDidTap() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "RoomViewController") as! RoomViewController
-        self.present(newViewController, animated: true, completion: nil)
-    }
     
     @objc
     func settingsDidTap() {
         
     }
     
-    private func loadHistory() {
+    private func loadLoadOptions() {
         repository.getOptionsItems { response in
             switch response {
             case let .success(result):

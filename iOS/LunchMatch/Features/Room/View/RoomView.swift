@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol RoomViewDelegate: AnyObject {
+    func didTapPreferencesButton()
+}
+
 class RoomView: UIView, XibInitializable {
     private let layout = UICollectionViewFlowLayout()
     private let manager = NamesCollectionViewManager()
+    weak var delegate: RoomViewDelegate?
     
     // MARK: - Properties
     @IBOutlet
@@ -54,5 +59,9 @@ class RoomView: UIView, XibInitializable {
         // qrCodeImageView?.kf.setImage(with: viewModel.qrCodeImageViewURL)
         roomIDLabel.text = viewModel.roomID
         manager.viewModels = viewModel.participants
+    }
+    
+    @IBAction private func didTapPreferencesButton() {
+        delegate?.didTapPreferencesButton()
     }
 }

@@ -13,7 +13,6 @@ class NameCollectionViewCell: UICollectionViewCell, XibInitializable {
     
     @IBOutlet
     private weak var nameLabel: UILabel!
-  
     
     // MARK: - Initialization
     override public init(frame: CGRect) {
@@ -28,11 +27,16 @@ class NameCollectionViewCell: UICollectionViewCell, XibInitializable {
     
     func configure(with viewModel: NameCollectionViewModel) {
         nameLabel.text = viewModel.name
-        backgroundColor = R.color.backgroundPrimary()
-        self.layer.cornerRadius = 15
     }
     
     private func didLoad() {
         xibSetup()
+        backgroundColor = R.color.backgroundPrimary()
+        nameLabel.font = .appBody
+        nameLabel.textColor = R.color.textPrimary()
+    }
+    
+    override func layoutSubviews() {
+        layer.cornerRadius = bounds.height / 2
     }
 }

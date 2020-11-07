@@ -8,7 +8,6 @@
 import UIKit
 
 class RoomView: UIView, XibInitializable {
-    
     private let layout = UICollectionViewFlowLayout()
     private let manager = NamesCollectionViewManager()
     
@@ -31,10 +30,9 @@ class RoomView: UIView, XibInitializable {
     }
     
     @IBOutlet
-    private  weak var submitButton: UIButton! {
+    private  weak var submitButton: SelectableButton! {
         didSet {
-            submitButton.setTitle("Submit", for: .normal)
-            submitButton.layer.cornerRadius = 15.0
+            submitButton.title = R.string.localizable.roomNextButtonTitle()
         }
     }
     
@@ -47,25 +45,14 @@ class RoomView: UIView, XibInitializable {
         super.init(coder: coder)
         didLoad()
     }
-//
-//    private func didLoad() {
-//
-//        manager.collectionView = namesCollectionView
-//        namesCollectionView.backgroundColor = UIColor.white
-//    }
     
     private func didLoad() {
         xibSetup()
     }
     
     func configure(with viewModel: RoomViewModel) {
-//        qrCodeImageView?.kf.setImage(with: viewModel.qrCodeImageViewURL)
+        // qrCodeImageView?.kf.setImage(with: viewModel.qrCodeImageViewURL)
         roomIDLabel.text = viewModel.roomID
-        
-        manager.viewModels = [NameCollectionViewModel(name: "Kekster"),
-                              NameCollectionViewModel(name: "Mekster"),
-                              NameCollectionViewModel(name: "Pek"),
-                              NameCollectionViewModel(name: "Hek"),
-                              NameCollectionViewModel(name: "Sek")]
+        manager.viewModels = viewModel.participants
     }
 }

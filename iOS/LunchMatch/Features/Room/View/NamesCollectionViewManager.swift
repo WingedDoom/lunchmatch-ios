@@ -24,7 +24,7 @@ class NamesCollectionViewManager: NSObject {
     
     var viewModels: [NameCollectionViewModel] = [] {
         didSet {
-            collectionView?.reloadData()
+            collectionView?.reloadSections([0])
         }
     }
     
@@ -65,6 +65,12 @@ extension NamesCollectionViewManager: UICollectionViewDataSource {
 extension NamesCollectionViewManager: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return viewModels[indexPath.row].name.getSizeWithConstrainedSize(CGSize(width: 200.0, height: 200.0), font: UIFont.systemFont(ofSize: 17))
+        let textSize = viewModels[indexPath.row].name
+            .getSizeWithConstrainedSize(
+                CGSize(width: .greatestFiniteMagnitude, height: UIFont.appBody.lineHeight),
+                font: .appBody
+            )
+        
+        return .init(width: textSize.width + 16, height: textSize.height + 8)
     }
 }

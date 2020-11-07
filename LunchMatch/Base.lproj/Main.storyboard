@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--History View Controller-->
+        <!--History-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HistoryViewController" customModule="LunchMatch" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vlA-ty-SbS"/>
+                    <navigationItem key="navigationItem" title="History" largeTitleDisplayMode="always" id="vlA-ty-SbS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +42,7 @@
         <!--Navigation Controller-->
         <scene sceneID="naX-NO-hJQ">
             <objects>
-                <navigationController id="MGh-S1-TRS" sceneMemberID="viewController">
+                <navigationController id="MGh-S1-TRS" customClass="LMNavigationController" customModule="LunchMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZRe-sH-KaI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

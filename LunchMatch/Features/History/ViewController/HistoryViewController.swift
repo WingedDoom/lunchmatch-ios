@@ -24,7 +24,6 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBar()
         loadHistory()
     }
     
@@ -38,14 +37,6 @@ class HistoryViewController: UIViewController {
     @objc
     func settingsDidTap() {
         
-    }
-    
-    private func setupNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title =  "Evgerher"
-        navigationController?.navigationBar.backgroundColor = UIColor.yellow
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newSessionDidTap))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(settingsDidTap))
     }
     
     private func loadHistory() {

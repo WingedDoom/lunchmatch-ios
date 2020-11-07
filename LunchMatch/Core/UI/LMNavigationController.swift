@@ -14,16 +14,14 @@ final class LMNavigationController: UINavigationController {
         navigationBar.tintColor = R.color.action()
         navigationBar.prefersLargeTitles = true
         
-        let largeFont = UIFont(name: "Cochin-Bold", size: 34) ?? .preferredFont(forTextStyle: .largeTitle)
-        let regularFont = UIFont(name: "Cochin-Bold", size: 18) ?? .preferredFont(forTextStyle: .title1)
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [
             .foregroundColor: R.color.textPrimary()!,
-            .font: largeFont
+            .font: UIFont.appLargeTitle
         ]
         appearance.titleTextAttributes = [
             .foregroundColor: R.color.textPrimary()!,
-            .font: regularFont
+            .font: UIFont.appTitle1
         ]
         appearance.backgroundColor = R.color.backgroundPrimary()
         

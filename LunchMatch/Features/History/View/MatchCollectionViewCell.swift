@@ -48,6 +48,10 @@ class MatchCollectionViewCell: UICollectionViewCell, XibInitializable {
     
     private func didLoad() {
         xibSetup()
+        
+        placeTitleLabel.font = .appBody
+        subtitleLabel.font = .appCaption1
+        dateLabel.font = .appCaption2
     }
     
     override func prepareForReuse() {

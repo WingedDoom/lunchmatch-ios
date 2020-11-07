@@ -25,9 +25,6 @@ class MatchCollectionViewCell: UICollectionViewCell, XibInitializable {
     @IBOutlet
     private  weak var stackView: UIStackView!
     
-    @IBOutlet
-    private  weak var shareButton: UIButton!
-    
     // MARK: - Initialization
     override public init(frame: CGRect) {
         super.init(frame: frame)

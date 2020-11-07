@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +12,6 @@
                 <outlet property="dateLabel" destination="5bT-Ns-CQ8" id="4El-L6-Nz0"/>
                 <outlet property="placeImageView" destination="Qeg-fH-J2w" id="hya-FZ-9Qd"/>
                 <outlet property="placeTitleLabel" destination="oe5-gM-GRy" id="V6X-0Z-cDy"/>
-                <outlet property="shareButton" destination="xZc-WP-2cK" id="Uvd-i9-R0h"/>
                 <outlet property="stackView" destination="UoQ-v6-GKI" id="8if-0E-P2v"/>
                 <outlet property="subtitleLabel" destination="K42-Uc-COA" id="Zuv-GR-CkJ"/>
             </connections>
@@ -60,18 +58,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZc-WP-2cK">
-                        <rect key="frame" x="275" y="100" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="6qv-Oh-cuQ"/>
-                            <constraint firstAttribute="height" constant="40" id="MEe-lI-gPg"/>
-                        </constraints>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal">
-                            <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="default"/>
-                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                        </state>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="UoQ-v6-GKI" firstAttribute="top" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="21" id="1qC-ld-s7h"/>
@@ -80,8 +66,6 @@
                     <constraint firstItem="5bT-Ns-CQ8" firstAttribute="leading" secondItem="Qeg-fH-J2w" secondAttribute="leading" id="Hrl-mD-hvI"/>
                     <constraint firstAttribute="trailing" secondItem="Qeg-fH-J2w" secondAttribute="trailing" id="UGJ-n7-JdF"/>
                     <constraint firstItem="5bT-Ns-CQ8" firstAttribute="centerY" secondItem="UoQ-v6-GKI" secondAttribute="centerY" id="dIf-0s-D0M"/>
-                    <constraint firstAttribute="trailing" secondItem="xZc-WP-2cK" secondAttribute="trailing" constant="15" id="jZp-oS-ytQ"/>
-                    <constraint firstItem="xZc-WP-2cK" firstAttribute="bottom" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="-15" id="sUj-gA-a3L"/>
                     <constraint firstItem="UoQ-v6-GKI" firstAttribute="trailing" secondItem="Qeg-fH-J2w" secondAttribute="trailing" id="tec-6K-wFP"/>
                 </constraints>
             </collectionViewCellContentView>
@@ -89,7 +73,4 @@
             <point key="canvasLocation" x="-456.52173913043481" y="81.026785714285708"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
-    </resources>
 </document>

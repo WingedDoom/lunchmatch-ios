@@ -11,7 +11,6 @@ final class LMNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.tintColor = R.color.action()
         navigationBar.prefersLargeTitles = true
         
         let appearance = UINavigationBarAppearance()
@@ -21,12 +20,14 @@ final class LMNavigationController: UINavigationController {
         ]
         appearance.titleTextAttributes = [
             .foregroundColor: R.color.textPrimary()!,
-            .font: UIFont.appTitle1
+            .font: UIFont.appRegularTitle
         ]
         appearance.backgroundColor = R.color.backgroundPrimary()
         
         navigationBar.compactAppearance = appearance
         navigationBar.standardAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance
+        
+        navigationBar.tintColor = R.color.action()
     }
 }

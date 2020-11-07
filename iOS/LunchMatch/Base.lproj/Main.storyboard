@@ -18,7 +18,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="History" largeTitleDisplayMode="always" id="vlA-ty-SbS"/>
+                    <navigationItem key="navigationItem" title="History" largeTitleDisplayMode="always" id="vlA-ty-SbS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="1Gc-GU-WxA">
+                            <connections>
+                                <segue destination="dUQ-g5-ZuT" kind="show" id="TqY-MI-rDR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="GRv-T2-0b0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="auR-5j-1SS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCf-gP-d4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="-1190" y="633"/>
         </scene>
-        <!--Select Mode View Controller-->
+        <!--Select Mode-->
         <scene sceneID="vdj-kT-AEU">
             <objects>
                 <viewController id="dUQ-g5-ZuT" customClass="SelectModeViewController" customModule="LunchMatch" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,6 +72,10 @@
                         <viewLayoutGuide key="safeArea" id="68A-KK-ytz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Select Mode" largeTitleDisplayMode="never" id="3GI-GE-VSm"/>
+                    <connections>
+                        <segue destination="V6G-FD-TiX" kind="show" identifier="roomSegue" id="mI7-WS-trH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0t-fr-TmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

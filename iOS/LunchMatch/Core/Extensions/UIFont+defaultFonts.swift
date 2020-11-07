@@ -12,8 +12,12 @@ extension UIFont {
         UIFont(name: "Cochin-Bold", size: 34) ?? .preferredFont(forTextStyle: .largeTitle)
     }
     
-    static var appTitle1: UIFont {
+    static var appRegularTitle: UIFont {
         UIFont(name: "Cochin-Bold", size: 18) ?? .preferredFont(forTextStyle: .title1)
+    }
+    
+    static var appTitle1: UIFont {
+        UIFont(name: "Cochin-Bold", size: 28) ?? .preferredFont(forTextStyle: .title1)
     }
     
     static var appBody: UIFont {

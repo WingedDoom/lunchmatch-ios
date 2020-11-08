@@ -42,7 +42,7 @@ class PreferencesTableViewManager: NSObject {
 
 // MARK: - UITableViewDataSource
 
-extension PreferencesTableViewManager: UITableViewDataSource {
+extension PreferencesTableViewManager: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 { return 150.0 }
@@ -100,13 +100,4 @@ extension PreferencesTableViewManager: UITableViewDataSource {
     private func getViewModel() -> PreferencesViewModel {
         return preferencesViewModelFactory.getPreferences()
     }
-}
-
-
-
-
-// MARK: - UITableViewDelegate
-
-extension PreferencesTableViewManager: UITableViewDelegate {
-    
 }

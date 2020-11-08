@@ -12,10 +12,7 @@ protocol RoomViewDelegate: AnyObject {
 }
 
 class RoomView: UIView, XibInitializable {
-    private let layout = UICollectionViewFlowLayout()
-    private let manager = NamesCollectionViewManager()
     weak var delegate: RoomViewDelegate?
-    
     // MARK: - Properties
     @IBOutlet
     private weak var qrCodeImageView: UIImageView?
@@ -24,15 +21,7 @@ class RoomView: UIView, XibInitializable {
     private weak var roomIDLabel: UILabel!
     
     @IBOutlet
-    private weak var namesCollectionView: UICollectionView! {
-        didSet {
-            manager.collectionView = namesCollectionView
-            namesCollectionView.backgroundColor = UIColor.white
-            namesCollectionView.setCollectionViewLayout(layout, animated: true)
-            layout.minimumLineSpacing = 10.0
-            layout.minimumInteritemSpacing = 10.0
-        }
-    }
+    private weak var tagsView: TagsView!
     
     @IBOutlet
     private  weak var submitButton: SelectableButton! {
@@ -58,7 +47,7 @@ class RoomView: UIView, XibInitializable {
     func configure(with viewModel: RoomViewModel) {
         // qrCodeImageView?.kf.setImage(with: viewModel.qrCodeImageViewURL)
         roomIDLabel.text = viewModel.roomID
-        manager.viewModels = viewModel.participants
+        tagsView.configure(with: viewModel.participants)
     }
     
     @IBAction private func didTapPreferencesButton() {

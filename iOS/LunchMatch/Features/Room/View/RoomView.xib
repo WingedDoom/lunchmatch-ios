@@ -10,10 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomView" customModule="LunchMatch" customModuleProvider="target">
             <connections>
-                <outlet property="namesCollectionView" destination="qC7-SW-L6Q" id="tme-lL-CDZ"/>
                 <outlet property="qrCodeImageView" destination="5qS-G6-WvG" id="Mwz-se-58L"/>
                 <outlet property="roomIDLabel" destination="G4e-q7-bR7" id="aX1-xg-mgM"/>
                 <outlet property="submitButton" destination="aET-5K-Wgh" id="XeM-X4-eX8"/>
+                <outlet property="tagsView" destination="I27-Ma-0rt" id="ojy-B2-eoL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -46,19 +46,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qC7-SW-L6Q">
-                    <rect key="frame" x="20" y="466.5" width="374" height="150"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="Dv0-1g-Fro"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="97D-0F-Ymc">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aET-5K-Wgh" customClass="SelectableButton" customModule="LunchMatch" customModuleProvider="target">
                     <rect key="frame" x="147" y="802" width="120" height="44"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,6 +60,13 @@
                         <action selector="didTapPreferencesButton" destination="-1" eventType="touchUpInside" id="BfD-Cm-yqo"/>
                     </connections>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I27-Ma-0rt" customClass="TagsView" customModule="LunchMatch" customModuleProvider="target">
+                    <rect key="frame" x="20" y="466.5" width="374" height="120"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="EqH-hP-Ucc"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,14 +76,14 @@
                 <constraint firstItem="aET-5K-Wgh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KZb-Lv-3dK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4cJ-mC-1Pi" secondAttribute="trailing" constant="15" id="OtQ-rK-4Dp"/>
                 <constraint firstItem="Wr1-gp-GxH" firstAttribute="top" secondItem="4cJ-mC-1Pi" secondAttribute="bottom" constant="20" id="Peq-Qx-PSM"/>
-                <constraint firstItem="qC7-SW-L6Q" firstAttribute="top" secondItem="Wr1-gp-GxH" secondAttribute="bottom" constant="20" id="TU6-0f-LI9"/>
                 <constraint firstItem="aET-5K-Wgh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-16" id="WFV-qx-MOw"/>
-                <constraint firstItem="qC7-SW-L6Q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="b7s-l7-QBC"/>
+                <constraint firstItem="I27-Ma-0rt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="YfH-5I-XgR"/>
                 <constraint firstItem="4cJ-mC-1Pi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="bvM-24-5m5"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qC7-SW-L6Q" secondAttribute="trailing" constant="20" id="c1e-or-1YX"/>
                 <constraint firstItem="G4e-q7-bR7" firstAttribute="top" secondItem="5qS-G6-WvG" secondAttribute="bottom" constant="10" id="iio-fB-DoX"/>
                 <constraint firstItem="G4e-q7-bR7" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="k01-rR-oxe"/>
                 <constraint firstItem="4cJ-mC-1Pi" firstAttribute="top" secondItem="G4e-q7-bR7" secondAttribute="bottom" constant="30" id="qaC-Y7-Tfh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I27-Ma-0rt" secondAttribute="trailing" constant="20" id="r9U-yy-RQc"/>
+                <constraint firstItem="I27-Ma-0rt" firstAttribute="top" secondItem="Wr1-gp-GxH" secondAttribute="bottom" constant="20" id="sHs-Fo-5xR"/>
                 <constraint firstItem="Wr1-gp-GxH" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="xOU-Ms-dgz"/>
             </constraints>
             <point key="canvasLocation" x="55" y="80"/>

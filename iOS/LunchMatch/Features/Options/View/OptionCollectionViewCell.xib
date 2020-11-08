@@ -31,9 +31,15 @@
                             <constraint firstAttribute="height" constant="155" id="lQc-vg-j4V"/>
                             <constraint firstAttribute="width" secondItem="Qeg-fH-J2w" secondAttribute="height" multiplier="66:31" id="uyV-CW-Vng"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UoQ-v6-GKI">
-                        <rect key="frame" x="98" y="176" width="232" height="37.5"/>
+                        <rect key="frame" x="98" y="163" width="232" height="37.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бар Голубая Устрица" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-gM-GRy">
                                 <rect key="frame" x="0.0" y="0.0" width="232" height="20.5"/>
@@ -50,7 +56,7 @@
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvP-Uc-84m" customClass="SelectableButton" customModule="LunchMatch" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="181" width="78" height="28"/>
+                        <rect key="frame" x="0.0" y="168" width="78" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="78" id="fUs-ac-isc"/>
                             <constraint firstAttribute="height" constant="28" id="tgz-EY-Xir"/>
@@ -59,7 +65,7 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="UoQ-v6-GKI" firstAttribute="top" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="21" id="1qC-ld-s7h"/>
+                    <constraint firstItem="UoQ-v6-GKI" firstAttribute="top" secondItem="Qeg-fH-J2w" secondAttribute="bottom" constant="8" id="1qC-ld-s7h"/>
                     <constraint firstItem="SvP-Uc-84m" firstAttribute="centerY" secondItem="UoQ-v6-GKI" secondAttribute="centerY" id="59u-9F-YAN"/>
                     <constraint firstItem="Qeg-fH-J2w" firstAttribute="leading" secondItem="6NH-vB-d6H" secondAttribute="leading" id="6e8-Ir-KoR"/>
                     <constraint firstItem="Qeg-fH-J2w" firstAttribute="top" secondItem="6NH-vB-d6H" secondAttribute="top" id="8eG-la-uep"/>

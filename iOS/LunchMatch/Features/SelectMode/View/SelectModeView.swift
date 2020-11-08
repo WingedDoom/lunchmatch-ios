@@ -38,8 +38,8 @@ final class SelectModeView: UIView, XibInitializable {
         titleLabel.font = .appTitle1
         descriptionLabel.font = .appBody
         singleButton.isSelected = true
-        singleButton.title = R.string.localizable.selectModeSingleTitle()
-        roomButton.title = R.string.localizable.selectModeRoomTitle()
+        singleButton.title = R.string.localizable.selectModeSingleButtonTitle()
+        roomButton.title = R.string.localizable.selectModeRoomButtonTitle()
     }
     
     func configure(with viewModel: SelectModeViewModel, animated: Bool) {

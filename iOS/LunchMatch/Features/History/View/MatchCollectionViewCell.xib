@@ -31,6 +31,12 @@
                             <constraint firstAttribute="height" constant="155" id="lQc-vg-j4V"/>
                             <constraint firstAttribute="width" secondItem="Qeg-fH-J2w" secondAttribute="height" multiplier="66:31" id="uyV-CW-Vng"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UoQ-v6-GKI">
                         <rect key="frame" x="162.5" y="176" width="167.5" height="37.5"/>

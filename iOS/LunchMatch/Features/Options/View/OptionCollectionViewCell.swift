@@ -14,10 +14,18 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     private weak var placeImageView: UIImageView?
     
     @IBOutlet
-    private weak var placeTitleLabel: UILabel!
+    private weak var placeTitleLabel: UILabel! {
+        didSet {
+            placeTitleLabel.font = .appBody
+        }
+    }
     
     @IBOutlet
-    private weak var subtitleLabel: UILabel!
+    private weak var subtitleLabel: UILabel! {
+        didSet {
+            subtitleLabel.font = .appCaption1
+        }
+    }
     
     @IBOutlet
     private weak var stackView: UIStackView!
@@ -26,11 +34,18 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     private weak var selectButton: SelectableButton! {
         didSet  {
             selectButton.addTarget(self, action: #selector(selectButtonDidTap), for: .touchUpInside)
-            selectButton.deselect()
+            selectButton.title = R.string.localizable.optionsCellSelectButtonDeselected()
         }
     }
     
-    private var placeSelected: Bool = false
+    private var placeSelected: Bool = false {
+        didSet {
+            selectButton.isSelected = placeSelected
+            selectButton.title = placeSelected
+                ? R.string.localizable.optionsCellSelectButtonSelected()
+                : R.string.localizable.optionsCellSelectButtonDeselected()
+        }
+    }
     
     // MARK: - Initialization
     override public init(frame: CGRect) {
@@ -55,8 +70,6 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     
     @objc private func selectButtonDidTap() {
         placeSelected = !placeSelected
-        
-        selectButton.isSelected = placeSelected
     }
     
     override func prepareForReuse() {

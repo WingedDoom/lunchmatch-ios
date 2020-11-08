@@ -35,6 +35,7 @@ class OptionsView: UIView {
         
         manager.collectionView = collectionView
         collectionView.backgroundColor = UIColor.white
+        layout.sectionInset = .init(top: 16, left: 16, bottom: 16, right: 16)
     }
     
     func configure(with viewModels: [OptionsCollectionViewModel]) {

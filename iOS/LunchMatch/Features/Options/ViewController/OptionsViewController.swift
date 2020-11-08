@@ -23,6 +23,8 @@ class OptionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = R.string.localizable.optionsTitle()
+        
         loadLoadOptions()
     }
     
@@ -44,7 +46,7 @@ class OptionsViewController: UIViewController {
         }
     }
     
-    private func parseResult(_ historyItems: [OptionItem]) -> [OptionsCollectionViewModel] {
-        historyItems.map { OptionsCollectionViewModel(imageLink: $0.imageLink, placeName: $0.placeName, participants: $0.participants) }
+    private func parseResult(_ options: [OptionItem]) -> [OptionsCollectionViewModel] {
+        options.map { OptionsCollectionViewModel(imageLink: $0.imageLink, placeName: $0.placeName, participants: $0.description) }
     }
 }

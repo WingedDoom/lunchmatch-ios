@@ -8,12 +8,11 @@
 import UIKit
 
 class OptionsViewCollectionViewManager: NSObject {
-    
     private enum Constants {
         static let maxWidth: CGFloat = 330.0
         static let cellIndent: CGFloat = 22.0
-        static let cellHeight: CGFloat = 231.0
-        static let cellAspectRatio: CGFloat = 0.7
+        static let cellHeight: CGFloat = 201
+        static let cellImageAspectRatio: CGFloat = 31/66
     }
     
     weak var collectionView: UICollectionView? {
@@ -36,8 +35,6 @@ class OptionsViewCollectionViewManager: NSObject {
     }
 }
 
-
-
 // MARK: - UICollectionViewDataSource
 
 extension OptionsViewCollectionViewManager: UICollectionViewDataSource {
@@ -57,22 +54,16 @@ extension OptionsViewCollectionViewManager: UICollectionViewDataSource {
     }
 }
 
-
-
-
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension OptionsViewCollectionViewManager: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width - 2 * Constants.cellIndent
-        let height = width * Constants.cellAspectRatio
-        return CGSize(width: width, height: height)
-        
-//        if collectionViewWidth > maxWidth {
-//            return CGSize(width: maxWidth, height: Constants.cellHeight)
-//        } else {
-//            return CGSize(width: collectionViewWidth, height: Constants.cellHeight)
-//        }
+        let imageHeight = width * Constants.cellImageAspectRatio
+        let textBoundingSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        let titleHeight = "A".getSizeWithConstrainedSize(textBoundingSize, font: .appBody).height
+        let subtitleHeight = "A".getSizeWithConstrainedSize(textBoundingSize, font: .appCaption1).height
+        return CGSize(width: width, height: ceil(imageHeight + titleHeight + subtitleHeight + 8))
     }
 }

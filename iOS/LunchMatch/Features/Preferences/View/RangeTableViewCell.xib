@@ -55,4 +55,9 @@
             <point key="canvasLocation" x="64.492753623188406" y="-299.33035714285711"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="Qgn-Bz-sHw">
+            <size key="intrinsicContentSize" width="-1" height="65"/>
+        </designable>
+    </designables>
 </document>

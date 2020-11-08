@@ -59,11 +59,12 @@ extension OptionsViewCollectionViewManager: UICollectionViewDataSource {
 extension OptionsViewCollectionViewManager: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let viewModel = viewModels[indexPath.row]
         let width = collectionView.bounds.width - 2 * Constants.cellIndent
         let imageHeight = width * Constants.cellImageAspectRatio
-        let textBoundingSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        let textBoundingSize = CGSize(width: width - 98, height: CGFloat.greatestFiniteMagnitude)
         let titleHeight = "A".getSizeWithConstrainedSize(textBoundingSize, font: .appBody).height
-        let subtitleHeight = "A".getSizeWithConstrainedSize(textBoundingSize, font: .appCaption1).height
+        let subtitleHeight = viewModel.description.getSizeWithConstrainedSize(textBoundingSize, font: .appCaption1).height
         return CGSize(width: width, height: ceil(imageHeight + titleHeight + subtitleHeight + 8))
     }
 }

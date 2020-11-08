@@ -10,5 +10,5 @@ import Foundation
 struct OptionsCollectionViewModel {
     let imageLink: URL
     let placeName: String
-    let participants: String
+    let description: String
 }

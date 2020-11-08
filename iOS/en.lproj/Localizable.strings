@@ -24,7 +24,7 @@
 "Options.title" = "Matched options";
 "Options.Cell.SelectButton.deselected" = "Select";
 "Options.Cell.SelectButton.selected" = "Selected";
-"Options.submitButtonTitle" = "Submit";
+"Options.submitButtonTitle" = "Match";
 "Options.submitWaitingButtonTitle" = "Waiting...";
 "Options.finalAlert.title" = "Match!";
 "Options.finalAlert.text" = "It looks like \"%@\" is the best place to eat today! Have a nice meal!";

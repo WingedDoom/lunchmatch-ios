@@ -61,7 +61,7 @@ class OptionCollectionViewCell: UICollectionViewCell, XibInitializable {
     func configure(with viewModel: OptionsCollectionViewModel) {
         placeImageView?.kf.setImage(with: viewModel.imageLink)
         placeTitleLabel.text = viewModel.placeName
-        subtitleLabel.text = viewModel.participants
+        subtitleLabel.text = viewModel.description
     }
     
     private func didLoad() {
